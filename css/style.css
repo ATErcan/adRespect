@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #111;
+  --beige: #DCC1AB;
+  --grey: #F5F0EC;
+  --green: #1B5B31;
+
+}
+
+.section-container {
+  max-width: 1320px;
+  margin: auto;
+}
+.grid-text-col {
+  padding: 1rem 2rem;
+}
+
+.hero {
+  background-color: var(--beige);
+  position: relative;
+}
+
+.hero-img {
+  background-image: url('../img/hero-img.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: calc(50% + 15px);
+}
+.hero-buttons {
+  padding: 0.75rem 1.25rem;
+  border-radius: 12.5rem;;
+}
+.contact-btn {
+  background-color: var(--green);
+  color: var(--grey, #F5F0EC);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.realisation-btn {
+  background-color: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.main-title {
+  font-size: 2.5rem;
+  color: var(--black, #111);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+}
+.hero-text {
+  color: var(--black, #111);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.carousel .carousel-control-prev {
+  width: 72px;
+  position: absolute;
+  bottom: 0;
+  left: calc(100% - 72px);
+}
+.carousel .carousel-control-next {
+  width: max-content;
+}
+.carousel .carousel-control-prev-icon {
+  background-color: var(--grey);
+  position: absolute;
+  bottom: 0;
+  right: 72px;
+}
+.carousel .carousel-control-next-icon {
+  background-color: var(--grey);
+  color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 72px;
+  width: 72px;
+  outline: black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 45px;
+  color: #000;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 45px;
+  color: #000;
+}
+@media screen and (min-width: 576px) {
+  .grid-text-col {
+    padding: 7rem 5rem;
+  }
+  .contact-btn, .realisation-btn {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid-text-col {
+    padding: 5rem 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .grid-text-col {
+    padding: 7rem 4.5rem;
+  }
+  .main-title {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .grid-text-col {
+    padding: 8rem 6rem;
+  }
+  .main-title {
+    font-size: 3.5rem;
+  }
+}
