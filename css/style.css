@@ -82,9 +82,11 @@
   position: absolute;
   bottom: 0;
   left: calc(100% - 72px);
+  opacity: 1;
 }
 .carousel .carousel-control-next {
   width: max-content;
+  opacity: 1;
 }
 .carousel .carousel-control-prev-icon {
   background-color: var(--grey);
@@ -122,6 +124,7 @@
 
 .oferta {
   background-color: var(--grey);
+  padding: 2.5rem 0 3.5rem;
 }
 .section-name {
   color: var(--green, #1B5B31);
@@ -135,7 +138,7 @@
 .section-title {
   color: var(--black, #111);
   font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 500;
   line-height: 115%; 
@@ -147,16 +150,18 @@
 }
 .oferta-text-container {
   max-width: 65rem;
-  margin: auto;
+  margin: 0 auto 3rem;
 }
 .oferta-text-container p {
   max-width: 44rem;
 }
 .card {
-  padding: 3rem 2.5rem;
+  padding: 1.5rem 1rem;
   border-radius: 1.75rem;
   background-color: var(--white);
   border: none;
+  max-width: 24rem;
+  margin: auto;
 }
 .card .icon {
   width: 2.5rem;
@@ -206,10 +211,30 @@
   .contact-btn, .realisation-btn {
     font-size: 1rem;
   }
+
+  .oferta {
+    padding: 4.5rem 0 6rem;
+  }
+  .section-title {
+    font-size: 2.75rem;
+  }
+  .oferta-text-container {
+    margin: 0 auto 6rem;
+  }
+  .card {
+    padding: 2rem 1.5rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .grid-text-col {
     padding: 5rem 3rem;
+  }
+
+  .oferta {
+    padding: 7.5rem 0 10rem;
+  }
+  .section-title {
+    font-size: 3rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -226,5 +251,10 @@
   }
   .main-title {
     font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .card {
+    padding: 3rem 2.5rem;
   }
 }
