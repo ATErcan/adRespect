@@ -265,8 +265,57 @@
 .firmie-content {
   max-width: 30rem;
 }
-.test {
-  border: 3px solid #ff0;
+
+.instagram-section {
+  background-color: var(--grey);
+  padding: 3.75rem 1rem;
+}
+.instagram-container {
+  background-color: var(--green);
+  max-width: 67rem;
+  margin: auto;
+  color: var(--grey);
+  padding: 2rem 1rem;
+  column-gap: 4rem;
+}
+
+.follow-us {
+  color: var(--grey, #F5F0EC);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+}
+.follow-us span {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+}
+.follow p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.01rem;
+  width: 10rem;
+}
+.follow button {
+  background-color: var(--grey);
+  color: var(--green, #1B5B31);
+  border-radius: 12.5rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 7.75rem;
+  padding: 0.75rem 1.5rem;
 }
 
 @media screen and (min-width: 576px) {
@@ -299,7 +348,15 @@
   .firmie-text {
     margin-bottom: 4.5rem;
   }
+
+  .instagram-container {
+    padding: 4rem 2rem;
+  }
+  .follow-us {
+    font-size: 2.5rem;
+  }
 }
+
 @media screen and (min-width: 768px) {
   .grid-text-col {
     padding: 5rem 3rem;
@@ -320,6 +377,13 @@
   }
   .firmie-section-title {
     font-size: 3rem;
+  }
+
+  .instagram-section {
+    padding: 3.75rem 0;
+  }
+  .instagram-container {
+    padding: 7.5rem 6.75rem;
   }
 }
 @media screen and (min-width: 992px) {
