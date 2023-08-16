@@ -203,6 +203,71 @@
   border-bottom: 1px solid var(--green);
 }
 
+.firmie {
+  background-color: var(--green);
+  color: var(--grey);
+}
+
+.firmie-img {
+  background-image: url('../img/o-firmie.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.firmie-section-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.0075rem;
+  margin-bottom: 1rem;
+}
+.firmie-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -0.09rem;
+  max-width: 15rem;
+  margin-bottom: 2.5rem;
+}
+.firmie-text-container span {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+}
+.firmie-btn {
+  border: 1px solid var(--grey);
+  border-radius: 12.5rem;
+  color: var(--grey);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 0.75rem 1.25rem;
+}
+
+.firmie-text {
+  margin-bottom: 3rem;
+}
+
+.firmie-text-container {
+  padding: 1rem 2rem;
+}
+.firmie-content {
+  max-width: 30rem;
+}
+.test {
+  border: 3px solid #ff0;
+}
 
 @media screen and (min-width: 576px) {
   .grid-text-col {
@@ -224,6 +289,16 @@
   .card {
     padding: 2rem 1.5rem;
   }
+
+  .firmie-text-container {
+    padding: 7rem 5rem;
+  }
+  .firmie-section-title {
+    font-size: 2.75rem;
+  }
+  .firmie-text {
+    margin-bottom: 4.5rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .grid-text-col {
@@ -236,6 +311,16 @@
   .section-title {
     font-size: 3rem;
   }
+
+  .firmie {
+    padding-right: 2rem;
+  }
+  .firmie-text-container {
+    padding: 5rem 0 5rem 3rem;
+  }
+  .firmie-section-title {
+    font-size: 3rem;
+  }
 }
 @media screen and (min-width: 992px) {
   .grid-text-col {
@@ -244,6 +329,10 @@
   .main-title {
     font-size: 2.7rem;
   }
+
+  .firmie-text-container {
+    padding: 7rem 0 7rem 4.5rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .grid-text-col {
@@ -251,6 +340,10 @@
   }
   .main-title {
     font-size: 3.5rem;
+  }
+
+  .firmie-text-container {
+    padding: 8rem 0 8rem 6rem;
   }
 }
 @media screen and (min-width: 1400px) {
