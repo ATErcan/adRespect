@@ -318,6 +318,73 @@
   padding: 0.75rem 1.5rem;
 }
 
+footer {
+  background-color: var(--black);
+  color: var(--grey);
+  padding: 3rem 2rem;
+}
+
+.social {
+  row-gap: 3.88rem;
+  margin-bottom: 7.5rem;
+}
+
+.let-us-know p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.01rem;
+}
+
+.let-us-know button {
+  background-color: var(--green);
+  color: var(--grey);
+  border-radius: 12.5rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 0.75rem 1.5rem;
+}
+.horizontal-line {
+  border: 1px solid var(--grey);
+}
+.platforms li {
+  list-style-type: none;
+}
+.platforms a {
+  text-decoration: none;
+  color: var(--grey);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.00875rem;
+}
+.contact-info li {
+  list-style-type: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.00875rem;
+}
+.copyright {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; 
+  letter-spacing: -0.01rem;
+}
+
 @media screen and (min-width: 576px) {
   .grid-text-col {
     padding: 7rem 5rem;
@@ -355,6 +422,10 @@
   .follow-us {
     font-size: 2.5rem;
   }
+
+  footer {
+    padding: 5rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -385,7 +456,12 @@
   .instagram-container {
     padding: 7.5rem 6.75rem;
   }
+
+  footer {
+    padding: 5rem 7rem;
+  }
 }
+
 @media screen and (min-width: 992px) {
   .grid-text-col {
     padding: 7rem 4.5rem;
@@ -397,7 +473,12 @@
   .firmie-text-container {
     padding: 7rem 0 7rem 4.5rem;
   }
+
+  footer {
+    padding: 5rem 9rem;
+  }
 }
+
 @media screen and (min-width: 1200px) {
   .grid-text-col {
     padding: 8rem 6rem;
@@ -409,7 +490,12 @@
   .firmie-text-container {
     padding: 8rem 0 8rem 6rem;
   }
+
+  footer {
+    padding: 5rem 12rem;
+  }
 }
+
 @media screen and (min-width: 1400px) {
   .card {
     padding: 3rem 2.5rem;
