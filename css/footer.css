@@ -1,0 +1,57 @@
+footer {
+  background-color: var(--black);
+  color: var(--grey);
+  padding: 3rem 2rem;
+}
+.social {
+  row-gap: 3.88rem;
+  margin-bottom: 7.5rem;
+}
+.let-us-know p {
+  letter-spacing: -0.01rem;
+}
+.let-us-know button {
+  background-color: var(--green);
+  color: var(--grey);
+}
+.horizontal-line {
+  border: 1px solid var(--grey);
+}
+.platforms li {
+  list-style-type: none;
+}
+.platforms a {
+  text-decoration: none;
+  color: var(--grey);
+  text-align: center;
+}
+.contact-info li {
+  list-style-type: none;
+}
+.copyright {
+  letter-spacing: -0.01rem;
+}
+
+@media screen and (min-width: 576px) {
+  footer {
+    padding: 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 5rem 7rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 5rem 9rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 5rem 12rem;
+  }
+}

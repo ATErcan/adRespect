@@ -1,0 +1,72 @@
+.firmie {
+  background-color: var(--green);
+  color: var(--grey);
+}
+.firmie-img {
+  background-image: url('../img/o-firmie.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.firmie-name {
+  letter-spacing: -0.0075rem;
+  margin-bottom: 1rem;
+}
+.firmie-title {
+  font-size: 2.5rem;
+  letter-spacing: -0.09rem;
+  max-width: 15rem;
+  margin-bottom: 2.5rem;
+}
+.firmie-btn {
+  border: 1px solid var(--grey);
+  color: var(--grey);
+  padding: 0.75rem 1.25rem;
+}
+.firmie-text {
+  letter-spacing: -0.01rem;
+  margin-bottom: 3rem;
+}
+.firmie-text-container {
+  padding: 3rem 2rem;
+}
+.firmie-content {
+  max-width: 30rem;
+}
+
+@media screen and (min-width: 576px) {
+  .firmie-text-container {
+    padding: 7rem 5rem;
+  }
+  .firmie-title {
+    font-size: 2.75rem;
+  }
+  .firmie-text {
+    margin-bottom: 4.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .firmie {
+    padding-right: 2rem;
+  }
+  .firmie-text-container {
+    padding: 5rem 0 5rem 3rem;
+  }
+  .firmie-title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .firmie-text-container {
+    padding: 7rem 0 7rem 4.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .firmie-text-container {
+    padding: 8rem 0 8rem 6rem;
+  }
+}

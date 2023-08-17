@@ -1,0 +1,50 @@
+.instagram-section {
+  background-color: var(--grey);
+  padding: 3.75rem 1rem;
+}
+.instagram-container {
+  background-color: var(--green);
+  max-width: 67rem;
+  margin: auto;
+  color: var(--grey);
+  padding: 2rem 1rem;
+  column-gap: 4rem;
+}
+.intagram-title {
+  color: var(--grey, #F5F0EC);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+}
+.intagram-title span {
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+}
+.follow p{
+  letter-spacing: -0.01rem;
+  width: 10rem;
+}
+.follow button {
+  background-color: var(--grey);
+  color: var(--green, #1B5B31);
+  width: 7.75rem;
+}
+
+@media screen and (min-width: 576px) {
+  .instagram-container {
+    padding: 4rem 2rem;
+  }
+  .intagram-title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .instagram-section {
+    padding: 3.75rem 0;
+  }
+  .instagram-container {
+    padding: 7.5rem 6.75rem;
+  }
+}
