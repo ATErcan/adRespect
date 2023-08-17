@@ -1,0 +1,18 @@
+.search-input-hidden {
+  max-width: 300px;
+}
+.search-input-visible {
+  width: 200px;
+}
+.slide-animation {
+  transition: all 1s;
+}
+
+@media screen and (min-width: 992px) {
+  .search-input-hidden {
+    max-width: none;
+    width: 0;
+    padding: 0;
+    border: none;
+  }
+}
