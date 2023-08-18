@@ -7,6 +7,7 @@ let screenWidth = window.innerWidth;
 const navbar = document.getElementById("navbar-nav");
 const navLinkClass = "nav-link";
 const navListClass = "nav-item texts small-texts px-lg-3";
+const navLinkTarget = "_self";
 
 const toggleSearchBar = (searchElement) => {
   searchElement.classList.add('slide-animation');
@@ -62,6 +63,6 @@ const createDropdownNavLink = (container, data) => {
 data.map(item => {
   return item.type === "dropdown"
   ? createDropdownNavLink(navbar, item)
-  : createListLink(navbar, item, navLinkClass, navListClass)
+  : createListLink(navbar, item, navLinkClass, navLinkTarget, navListClass)
 })
 

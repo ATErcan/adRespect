@@ -32,7 +32,7 @@ export const data = [
     id: "n3",
     type: "navlink",
     name: "Realizacje",
-    link: "#",
+    link: "#realizacje",
   },
   {
     id: "n4",
