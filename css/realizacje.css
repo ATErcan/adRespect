@@ -29,7 +29,6 @@
   background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0.00) 100%);
   pointer-events: none; 
 }
-
 .grid-item {
   width: 16.5rem;
   padding: 0 .5rem 1rem;
@@ -38,7 +37,6 @@
 .grid-item img {
   width: 100%;
 }
-
 .expand-btn {
   border: 1px solid var(--black);
   color: var(--black);
@@ -51,6 +49,46 @@
 .expand-btn svg {
   fill: var(--black);
 }
+.img-container img {
+  width: 100%;
+  transition: opacity 0.3s ease-out;
+}
+.modal-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-controls button {
+  padding: 0.5rem 1rem;
+  background-color: var(--grey);
+  opacity: 0.2;
+  border: none;
+}
+.modal-controls button:hover {
+  opacity: 0.7;
+}
+.slide-left {
+  animation: slide .5s ease-in-out 1;
+}
+.slide-right {
+  animation: slide .5s ease-in-out 1 reverse;
+}
+.slide-animation {
+  transition: transform 0.3s ease-in-out;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media screen and (min-width: 576px) {
   .realizacje-text-container {
     margin: 0 auto 4rem;
