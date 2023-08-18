@@ -26,7 +26,7 @@ export const data = [
     id: "n2",
     type: "navlink",
     name: "O firmie",
-    link: "#",
+    link: "#firmie",
   },
   {
     id: "n3",
@@ -38,6 +38,6 @@ export const data = [
     id: "n4",
     type: "navlink",
     name: "Kontakt",
-    link: "#",
+    link: "#kontakt",
   },
 ]

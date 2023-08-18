@@ -1,8 +1,8 @@
-.instagram-section {
+.kontakt-section {
   background-color: var(--grey);
   padding: 3.75rem 1rem;
 }
-.instagram-container {
+.kontakt-container {
   background-color: var(--green);
   max-width: 67rem;
   margin: auto;
@@ -33,7 +33,7 @@
 }
 
 @media screen and (min-width: 576px) {
-  .instagram-container {
+  .kontakt-container {
     padding: 4rem 2rem;
   }
   .intagram-title {
@@ -41,10 +41,10 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .instagram-section {
+  .kontakt-section {
     padding: 3.75rem 0;
   }
-  .instagram-container {
+  .kontakt-container {
     padding: 7.5rem 6.75rem;
   }
 }

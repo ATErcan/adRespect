@@ -1,9 +1,12 @@
 import { data } from "./navbarData.js";
+import { createListLink } from "./functions.js";
 
 const searchIcon = document.getElementById('searchIcon');
 let screenWidth = window.innerWidth;
 
 const navbar = document.getElementById("navbar-nav");
+const navLinkClass = "nav-link";
+const navListClass = "nav-item texts small-texts px-lg-3";
 
 const toggleSearchBar = (searchElement) => {
   searchElement.classList.add('slide-animation');
@@ -30,34 +33,6 @@ window.addEventListener('resize', () => {
   }
 });
 
-const createNavLink = (container, data) => {
-  const listElement = document.createElement("li");
-  const navLink = document.createElement("a");
-
-  container.appendChild(listElement);
-  listElement.appendChild(navLink);
-
-  listElement.className = "nav-item texts small-texts px-lg-3";
-  navLink.className = "nav-link";
-
-  listElement.id = data.id;
-  navLink.href = data.link;
-  navLink.textContent = data.name;
-}
-
-const createDropdownItem = (menu, item) => {
-  const listElement = document.createElement("li");
-  const dropdownItem = document.createElement("a");
-
-  menu.appendChild(listElement);
-  listElement.appendChild(dropdownItem);
-
-  listElement.id = item.id;
-  dropdownItem.className = "dropdown-item";
-  dropdownItem.href = item.link;
-  dropdownItem.textContent = item.name;
-}
-
 const createDropdownNavLink = (container, data) => {
   const listElement = document.createElement("li");
   const dropdownLink = document.createElement("a");
@@ -66,8 +41,9 @@ const createDropdownNavLink = (container, data) => {
   container.appendChild(listElement);
   listElement.append(...[dropdownLink, dropdownList]);
 
+  const dropdownItemClass = "dropdown-item";
   data.items.map(item => {
-    return createDropdownItem(dropdownList, item);
+    return createListLink(dropdownList, item, dropdownItemClass);
   })
 
   listElement.className = "nav-item dropdown px-lg-3";
@@ -86,6 +62,6 @@ const createDropdownNavLink = (container, data) => {
 data.map(item => {
   return item.type === "dropdown"
   ? createDropdownNavLink(navbar, item)
-  : createNavLink(navbar, item)
+  : createListLink(navbar, item, navLinkClass, navListClass)
 })
 
