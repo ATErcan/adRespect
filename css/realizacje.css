@@ -19,14 +19,14 @@
 .grid {
   margin: auto;
 }
-.grid::after {
+.grid-expand::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 62.5rem; 
-  background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0.00) 100%);
+  background: linear-gradient(360deg, var(--beige) 0%, rgba(214, 183, 158, 0.00) 100%);
   pointer-events: none; 
 }
 .grid-item {
@@ -34,8 +34,17 @@
   padding: 0 .5rem 1rem;
   cursor: pointer;
 }
+.grid-item a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.grid-item a:hover img {
+  transform: scale(1.1);
+}
 .grid-item img {
   width: 100%;
+  transition: transform 0.3s ease;
 }
 .expand-btn {
   border: 1px solid var(--black);
@@ -71,23 +80,6 @@
 .modal-controls button:hover {
   opacity: 0.7;
 }
-.slide-left {
-  animation: slide .5s ease-in-out 1;
-}
-.slide-right {
-  animation: slide .5s ease-in-out 1 reverse;
-}
-.slide-animation {
-  transition: transform 0.3s ease-in-out;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
 @media screen and (min-width: 576px) {
   .realizacje-text-container {
@@ -99,7 +91,6 @@
     padding: 0 1rem 1.5rem;
   }
 }
-
 @media screen and (min-width: 768px) {
   .realizacje {
     padding-top: 5rem;
