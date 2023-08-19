@@ -42,8 +42,6 @@ const getImages = (page = 1) => {
   const url = `https://api.unsplash.com/photos?client_id=${key}&page=${page}`
   try {
     fetch(url).then(res => res.json()).then(data => {
-      console.log(page)
-      console.log(data)
       gridExpandStyle(data);
       data.map((item) => {
         const imgUrl = 

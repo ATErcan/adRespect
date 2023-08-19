@@ -1,6 +1,11 @@
 .firmie {
   background-color: var(--green);
   color: var(--grey);
+  overflow: hidden;
+}
+.section-container {
+  max-width: 1320px;
+  margin: auto;
 }
 .firmie-img {
   background-image: url('../img/o-firmie.png');
