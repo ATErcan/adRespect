@@ -39,6 +39,7 @@ const createGridItem = (src, alt, id) => {
 }
 
 const getImages = (page = 1) => {
+  const key = "YqILCJyi8ozoQyApRj5AZ2HQkOQSfwExW4GvpsKfYJw"
   const url = `https://api.unsplash.com/photos?client_id=${key}&page=${page}`
   try {
     fetch(url).then(res => res.json()).then(data => {
@@ -56,6 +57,7 @@ const getImages = (page = 1) => {
         itemSelector: '.grid-item',
         columnWidth: '.grid-item',
         fitWidth: true,
+        gutter: 40,
       });
     })
   } catch (error) {
@@ -82,7 +84,7 @@ const addImagesToArray = (id, url, alt) => {
 }
 
 const swipeImage = (index) => {
-  modalImg.style.opacity = 0.8; // Start fading out
+  modalImg.style.opacity = 0.8;
   setTimeout(() => {
     modalImg.id = images[index].id;
     modalImg.src = images[index].url;

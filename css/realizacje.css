@@ -31,8 +31,8 @@
 }
 .grid-item {
   width: 16.5rem;
-  padding: 0 .5rem 1rem;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 .grid-item a {
   display: block;
@@ -49,6 +49,7 @@
 .expand-btn {
   border: 1px solid var(--black);
   color: var(--black);
+  background-color: transparent;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -88,7 +89,7 @@
   }
   .grid-item {
     width: 21rem;
-    padding: 0 1rem 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -100,7 +101,7 @@
   }
   .grid-item {
     width: 28rem;
-    padding: 0 1.35rem 2.6rem;
+    margin-bottom: 2.5rem;
   }
 }
 @media screen and (min-width: 992px) {

@@ -12,6 +12,7 @@ footer {
 }
 .let-us-know button {
   background-color: var(--green);
+  border: none;
   color: var(--grey);
 }
 .horizontal-line {
@@ -37,19 +38,16 @@ footer {
     padding: 5rem;
   }
 }
-
 @media screen and (min-width: 768px) {
   footer {
     padding: 5rem 7rem;
   }
 }
-
 @media screen and (min-width: 992px) {
   footer {
     padding: 5rem 9rem;
   }
 }
-
 @media screen and (min-width: 1200px) {
   footer {
     padding: 5rem 12rem;

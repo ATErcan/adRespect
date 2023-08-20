@@ -41,71 +41,14 @@
 
   <!-- HERO -->
   <main class="hero">
-    <div class="slider">
-      <div class="slide">
-        <div class="hero-left">
-          <div class="hero-text-container d-flex flex-column justify-content-center align-items-center row-gap-5 ">
-            <h1 class="titles main-title">Nowoczesna aranżacja Twojego ogrodu</h1>
-            <p class="texts fs-6 hero-text">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. 
-              Oferujemy kompleksowy zakres usługz indywidualnym podejściem do każdego projektu.
-            </p>
-            <div class="d-flex flex-wrap row-gap-2 column-gap-3 column-gap-5-lg">
-              <button class="btn texts fs-6 btn-style hero-buttons contact-btn">Skontaktuj się z nami</button>
-              <button class="btn texts fs-6 btn-style hero-buttons realisation-btn d-flex align-items-center column-gap-2">
-                Zobacz nasze realizacje
-                <img src="./img/vector-down.svg" alt="Vector-down">
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="hero-right d-none d-md-block"></div>
-      </div>
-      <div class="slide">
-        <div class="hero-left">
-          <div class="hero-text-container d-flex flex-column justify-content-center align-items-center row-gap-5 ">
-            <h1 class="titles main-title">Nowoczesna aranżacja Twojego ogrodu</h1>
-            <p class="texts fs-6 hero-text">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. 
-              Oferujemy kompleksowy zakres usługz indywidualnym podejściem do każdego projektu.
-            </p>
-            <div class="d-flex flex-wrap row-gap-2 column-gap-3 column-gap-5-lg">
-              <button class="btn texts fs-6 btn-style hero-buttons contact-btn">Skontaktuj się z nami</button>
-              <button class="btn texts fs-6 btn-style hero-buttons realisation-btn d-flex align-items-center column-gap-2">
-                Zobacz nasze realizacje
-                <img src="./img/vector-down.svg" alt="Vector-down">
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="hero-right d-none d-md-block"></div>
-      </div>
-      <div class="slide">
-        <div class="hero-left">
-          <div class="hero-text-container d-flex flex-column justify-content-center align-items-center row-gap-5 ">
-            <h1 class="titles main-title">Nowoczesna aranżacja Twojego ogrodu</h1>
-            <p class="texts fs-6 hero-text">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. 
-              Oferujemy kompleksowy zakres usługz indywidualnym podejściem do każdego projektu.
-            </p>
-            <div class="d-flex flex-wrap row-gap-2 column-gap-3 column-gap-5-lg">
-              <button class="btn texts fs-6 btn-style hero-buttons contact-btn">Skontaktuj się z nami</button>
-              <button class="btn texts fs-6 btn-style hero-buttons realisation-btn d-flex align-items-center column-gap-2">
-                Zobacz nasze realizacje
-                <img src="./img/vector-down.svg" alt="Vector-down">
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="hero-right d-none d-md-block"></div>
-      </div>
+    <div class="slider" id="slider">
       <div class="slider-buttons">
-        <button class="slider-btn prev-slide">
+        <button class="slider-btn prev-slide btn-hover">
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
             <path d="M0.795115 10.9393C0.209328 11.5251 0.209328 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.80761 10.9268 0.80761 10.3411 1.3934L0.795115 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z" fill="black"/>
           </svg>
         </button>
-        <button class="slider-btn next-slide">
+        <button class="slider-btn next-slide btn-hover">
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
             <path d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807611 15.1234 0.807611 14.5376 1.3934C13.9518 1.97919 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z" fill="black"/>
           </svg>
@@ -150,7 +93,7 @@
               elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
             </p>
             <div class="d-flex text-center">
-              <button class="btn texts fs-6 btn-style firmie-btn column-gap-2">
+              <button class="texts fs-6 btn-style btn-hover firmie-btn column-gap-2">
                 Poznaj nas bliżej
                 <img src="./img/vector-right-grey.svg" alt="Vector-right">
               </button>
@@ -170,7 +113,7 @@
       </div>
       <div class="grid">
         
-        <button class="btn texts fs-6 btn-style expand-btn d-flex align-items-center column-gap-2">
+        <button class="texts fs-6 btn-style btn-hover expand-btn d-flex align-items-center column-gap-2">
           Rozwiń
           <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="Vector" d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"/>
@@ -211,7 +154,7 @@
         <p class="m-0 texts fs-6">
           Śledź nasze najnowsze realizacje!
         </p>
-        <button class="btn texts fs-6 btn-style">Instagram</button>
+        <button class="texts fs-6 btn-style btn-hover">Instagram</button>
       </div>
     </div>
   </section>
@@ -223,7 +166,7 @@
         <img src="./img/giarddesign-light.svg" alt="GiardDesign">
         <div class="contact-us d-flex flex-column flex-md-row row-gap-3 column-gap-4 align-items-center">
           <p class="m-0 texts fs-6 text-center text-md-start">Daj znać, co możemy dla Ciebie zrobić!</p>
-          <button class="btn texts fs-6 btn-style">Skontaktuj się z nami</button>
+          <button class="texts fs-6 btn-style btn-hover">Skontaktuj się z nami</button>
         </div>
       </div>
       <hr class="horizontal-line">
@@ -248,7 +191,7 @@
   <script type="module" src="./js/navbar.js"></script>
   <script type="module" src="./js/index.js"></script>
   <script type="module" src="./js/oferta.js"></script>
-  <script type="module" src="./js/realizacje.js"></script>
+  <!-- <script type="module" src="./js/realizacje.js"></script> -->
   <script type="module" src="./js/footer.js"></script>
 </body>
 </html>

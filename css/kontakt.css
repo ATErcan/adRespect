@@ -28,6 +28,7 @@
 }
 .follow button {
   background-color: var(--grey);
+  border: none;
   color: var(--green, #1B5B31);
   width: 7.75rem;
 }
