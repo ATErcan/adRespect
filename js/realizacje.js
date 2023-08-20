@@ -39,7 +39,6 @@ const createGridItem = (src, alt, id) => {
 }
 
 const getImages = (page = 1) => {
-  const key = "YqILCJyi8ozoQyApRj5AZ2HQkOQSfwExW4GvpsKfYJw"
   const url = `https://api.unsplash.com/photos?client_id=${key}&page=${page}`
   try {
     fetch(url).then(res => res.json()).then(data => {
