@@ -31,8 +31,8 @@ const createSlide = (item) => {
   const title = document.createElement("h1");
   const text = document.createElement("p");
   const btnWrapper = document.createElement("div");
-  const contactBtn = document.createElement("button");
-  const realisationBtn = document.createElement("button");
+  const contactBtn = document.createElement("a");
+  const realisationBtn = document.createElement("a");
   const vectorIcon = document.createElement("img");
 
   slider.appendChild(slide);
@@ -51,6 +51,8 @@ const createSlide = (item) => {
   contactBtn.className = "texts fs-6 btn-style btn-hover hero-buttons contact-btn animate__animated hover-effect";
   realisationBtn.className = "texts fs-6 btn-style btn-hover hero-buttons realisation-btn d-flex align-items-center column-gap-2 animate__animated hover-effect";
 
+  contactBtn.href = "https://adrespect.pl/kontakt/#dzial";
+  realisationBtn.href = "#realizacje";
   vectorIcon.src = "./img/vector-down.svg";
   vectorIcon.alt = "Vector-down";
 

@@ -1,6 +1,9 @@
 .navbar {
   background-color: var(--white) !important;
 }
+.search-icon {
+  cursor: pointer;
+}
 .search-input-hidden {
   max-width: 300px;
 }

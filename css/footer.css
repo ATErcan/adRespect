@@ -10,14 +10,12 @@ footer {
 .let-us-know p {
   letter-spacing: -0.01rem;
 }
-.let-us-know button {
-  background-color: var(--green);
-  border: none;
-  color: var(--grey);
-}
-.let-us-know button a {
+.let-us-know a {
+  display: block;
   color: var(--grey);
   text-decoration: none;
+  background-color: var(--green);
+  border: none;
 }
 .horizontal-line {
   border: 1px solid var(--grey);

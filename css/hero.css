@@ -33,11 +33,13 @@
 }
 .contact-btn {
   background-color: var(--green);
+  text-decoration: none;
   color: var(--grey, #F5F0EC);
   border: none;
 }
 .realisation-btn {
   background-color: transparent;
+  text-decoration: none;
   color: var(--green);
   border: 1px solid var(--green);
 }
