@@ -48,8 +48,8 @@ const createSlide = (item) => {
   title.className = "titles main-title";
   text.className = "texts fs-6 hero-text";
   btnWrapper.className = "d-flex flex-wrap row-gap-2 column-gap-3 column-gap-5-lg";
-  contactBtn.className = "texts fs-6 btn-style btn-hover hero-buttons contact-btn";
-  realisationBtn.className = "texts fs-6 btn-style btn-hover hero-buttons realisation-btn d-flex align-items-center column-gap-2";
+  contactBtn.className = "texts fs-6 btn-style btn-hover hero-buttons contact-btn animate__animated hover-effect";
+  realisationBtn.className = "texts fs-6 btn-style btn-hover hero-buttons realisation-btn d-flex align-items-center column-gap-2 animate__animated hover-effect";
 
   vectorIcon.src = "./img/vector-down.svg";
   vectorIcon.alt = "Vector-down";

@@ -18,6 +18,11 @@
   <link rel="stylesheet" href="./css/realizacje.css">
   <link rel="stylesheet" href="./css/kontakt.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <!-- Animation -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <title>GiardDesign</title>
 </head>
 <body>
@@ -33,7 +38,7 @@
         </ul>
         <form class="d-flex px-lg-3" role="search">
           <input class="form-control me-2 search-input-hidden" type="search" id="searchInput" placeholder="Search" aria-label="Search">
-          <img src="./img/mag-glass.svg" alt="Search" id="searchIcon" class="px-2">
+          <img src="./img/mag-glass.svg" alt="Search" id="searchIcon" class="px-2 animate__animated">
         </form>
       </div>
     </div>
@@ -60,7 +65,7 @@
   <!-- OFERTA -->
   <section class="oferta">
     <div class="container">
-      <div class="oferta-text-container">
+      <div class="oferta-text-container animate__animated fade-in-left">
         <p class="section-names oferta-name">Oferta</p>
         <h2 class="titles oferta-title">Działamy <span class="titles-italic">kompleksowo</span></h2>
         <p class="texts fs-6 oferta-text">
@@ -82,7 +87,7 @@
         <div class="d-none d-md-block col-md-6 bg-image firmie-img">
         </div>
         <div class="col-md-6"></div>
-        <div class="col-12 col-md-6 firmie-text-container">
+        <div class="col-12 col-md-6 firmie-text-container animate__animated fade-in-right">
           <div class="firmie-content m-auto m-lg-0 ms-lg-auto">
             <p class="section-names firmie-name">O firmie</p>
             <h2 class="firmie-title">Tworzymy z <span class="titles-italic">pasją</span></h2>
@@ -93,7 +98,7 @@
               elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
             </p>
             <div class="d-flex text-center">
-              <button class="texts fs-6 btn-style btn-hover firmie-btn column-gap-2">
+              <button class="texts fs-6 btn-style btn-hover firmie-btn column-gap-2 animate__animated hover-effect">
                 Poznaj nas bliżej
                 <img src="./img/vector-right-grey.svg" alt="Vector-right">
               </button>
@@ -107,7 +112,7 @@
   <!-- REALIZACJE -->
   <section class="realizacje" id="realizacje">
     <div class="realizacje-container position-relative">
-      <div class="realizacje-text-container">
+      <div class="realizacje-text-container animate__animated fade-up">
         <p class="section-names">Realizacje</p>
         <h2 class="titles oferta-title">Nasze <span class="titles-italic">projekty</span></h2>
       </div>
@@ -143,7 +148,7 @@
 
   <!-- KONTAKT -->
   <section class="kontakt-section" id="kontakt">
-    <div class="kontakt-container d-flex flex-column row-gap-4 flex-md-row align-items-md-center">
+    <div class="kontakt-container d-flex flex-column row-gap-4 flex-md-row align-items-md-center animate__animated back-in-down">
       <p class="titles intagram-title">
         Zostańmy w kontakcie!
         <br/>
@@ -154,7 +159,7 @@
         <p class="m-0 texts fs-6">
           Śledź nasze najnowsze realizacje!
         </p>
-        <button class="btn-style btn-hover">
+        <button class="btn-style btn-hover animate__animated hover-effect">
           <a href="https://www.instagram.com/adrespect/" target="_blank" class="texts fs-6">Instagram</a>
         </button>
       </div>
@@ -168,7 +173,9 @@
         <img src="./img/giarddesign-light.svg" alt="GiardDesign">
         <div class="contact-us d-flex flex-column flex-md-row row-gap-3 column-gap-4 align-items-center">
           <p class="m-0 texts fs-6 text-center text-md-start">Daj znać, co możemy dla Ciebie zrobić!</p>
-          <button class="texts fs-6 btn-style btn-hover">Skontaktuj się z nami</button>
+          <button class="texts fs-6 btn-style btn-hover animate__animated hover-effect">
+            <a href="https://adrespect.pl/kontakt/#dzial" target="_blank">Skontaktuj się z nami</a>
+          </button>
         </div>
       </div>
       <hr class="horizontal-line">
@@ -195,5 +202,6 @@
   <script type="module" src="./js/oferta.js"></script>
   <script type="module" src="./js/realizacje.js"></script>
   <script type="module" src="./js/footer.js"></script>
+  <script type="module" src="./js/animation.js"></script>
 </body>
 </html>

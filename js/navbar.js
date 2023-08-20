@@ -1,4 +1,4 @@
-import { data } from "./navbarData.js";
+import { data } from "./helpers/navbarData.js";
 import { createListLink } from "./functions.js";
 
 const searchIcon = document.getElementById('searchIcon');
@@ -21,8 +21,9 @@ const toggleSearchBar = (searchElement) => {
 }
 
 searchIcon.addEventListener('click', () => {
-  const searchInput = document.getElementById('searchInput')
+  const searchInput = document.getElementById('searchInput');
   if(screenWidth >= 992) {
+    searchIcon.classList.toggle("animate__swing");
     toggleSearchBar(searchInput)
   }
 })

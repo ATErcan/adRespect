@@ -1,4 +1,4 @@
-import { data as realizacjeData } from "./relizacjeData.js";
+import { data as realizacjeData } from "./helpers/relizacjeData.js";
 
 const masonryGrid = document.querySelector('.grid');
 const expandBtn = document.querySelector('.expand-btn');

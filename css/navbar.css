@@ -1,3 +1,6 @@
+.navbar {
+  background-color: var(--white) !important;
+}
 .search-input-hidden {
   max-width: 300px;
 }

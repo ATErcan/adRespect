@@ -6,18 +6,18 @@ export const data = [
     items: [
       {
         id: "d1",
-        name: "Action",
-        link: "#",
+        name: "Projekty",
+        link: "#card1",
       },
       {
         id: "d2",
-        name: "Second Action",
-        link: "#",
+        name: "Wizualizacje",
+        link: "#card2",
       },
       {
         id: "d3",
-        name: "Another Action",
-        link: "#",
+        name: "Realizacje",
+        link: "#card3",
       },
     ],
     link: "#",

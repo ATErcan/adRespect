@@ -1,4 +1,4 @@
-import { data } from "./ofertaData.js";
+import { data } from "./helpers/ofertaData.js";
 const gridRow = document.getElementById("cardGridRow");
 
 const createCardComponent = ( cardContent ) => {
@@ -24,14 +24,15 @@ const createCardComponent = ( cardContent ) => {
   vectorIcon.src = "./img/vector-right.svg";
   vectorIcon.alt = "Vector-right";
   cardLink.href = cardContent.link;
+  cardLink.target = "_blank";
 
-  gridCol.className = "col-12 col-md-6 col-lg-4"
+  gridCol.className = "col-12 col-md-6 col-lg-4 animate__animated card-animate"
   cardContainer.className = "card";
   cardBody.className = "card-body";
   cardIcon.className = "icon";
   cardTitle.className = "titles card-title";
   cardText.className = "texts small-texts card-text";
-  cardLink.className = "texts fs-6 card-link";
+  cardLink.className = "texts fs-6 card-link animate__animated hover-effect";
   vectorIcon.className = "ms-2";
 
   if(cardContent.title === "Wizualizacje"){
