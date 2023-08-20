@@ -50,7 +50,9 @@ const masonryLayout = () => {
 }
 
 const getImages = (page = 1) => {
-  const url = `https://api.unsplash.com/photos?client_id=${key}&page=${page}`
+  const theme = "garden";
+  const numberOfPhotos = 10;
+  const url = `https://api.unsplash.com/photos/random?client_id=${key}&query=${theme}&count=${numberOfPhotos}&page=${page}`;
   try {
     fetch(url).then(res => res.json()).then(data => {
       gridExpandStyle(data);
