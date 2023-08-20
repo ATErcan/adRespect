@@ -1,3 +1,5 @@
+import { data as realizacjeData } from "./relizacjeData.js";
+
 const masonryGrid = document.querySelector('.grid');
 const expandBtn = document.querySelector('.expand-btn');
 const modalImg = document.querySelector(".modal-img");
@@ -5,7 +7,7 @@ const prevImg = document.getElementById("prevButton");
 const nextImg = document.getElementById("nextButton");
 
 let masonry;
-let page = 1;
+let page = 0;
 let activeIndex;
 let images = [];
 
@@ -38,6 +40,15 @@ const createGridItem = (src, alt, id) => {
   })
 }
 
+const masonryLayout = () => {
+  masonry = new Masonry(masonryGrid, {
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-item',
+    fitWidth: true,
+    gutter: 40,
+  });
+}
+
 const getImages = (page = 1) => {
   const url = `https://api.unsplash.com/photos?client_id=${key}&page=${page}`
   try {
@@ -52,12 +63,7 @@ const getImages = (page = 1) => {
         return createGridItem(imgUrl, imgAlt, item.id);
       })
 
-      masonry = new Masonry(masonryGrid, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        fitWidth: true,
-        gutter: 40,
-      });
+      masonryLayout();
     })
   } catch (error) {
     console.log(error)
@@ -112,7 +118,12 @@ nextImg.addEventListener("click", () => {
 })
 
 window.onload = () => {
-  getImages();
+  realizacjeData.map(item => {
+    addImagesToArray(item.id, item.src, item.alt);
+    masonryGrid.classList.add("grid-expand")
+    return createGridItem(item.src, item.alt, item.id)
+  })
+  masonryLayout();
 }
 
 expandBtn.addEventListener("click", (e) => {
