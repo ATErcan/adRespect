@@ -1,4 +1,5 @@
 import { data as realizacjeData } from "./helpers/relizacjeData.js";
+import UNSPLASH_API_KEY from "./apikey.js";
 
 const masonryGrid = document.querySelector('.grid');
 const expandBtn = document.querySelector('.expand-btn');
@@ -52,7 +53,7 @@ const masonryLayout = () => {
 const getImages = (page = 1) => {
   const theme = "garden";
   const numberOfPhotos = 10;
-  const url = `https://api.unsplash.com/photos/random?client_id=${key}&query=${theme}&count=${numberOfPhotos}&page=${page}`;
+  const url = `https://api.unsplash.com/photos/random?client_id=${UNSPLASH_API_KEY}&query=${theme}&count=${numberOfPhotos}&page=${page}`;
   try {
     fetch(url).then(res => res.json()).then(data => {
       gridExpandStyle(data);
@@ -61,20 +62,20 @@ const getImages = (page = 1) => {
           item.urls.regular
           ?? "https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-5529.jpg?w=1380&t=st=1692369396~exp=1692369996~hmac=e07c889690be317cda5c6fafa06e7ef8595a704dc83bd97ed76a407f4ea6c884";
         const imgAlt = item.alt_description ?? "unsplash-image";
-        addImagesToArray(item.id, imgUrl, imgAlt)
+        addImagesToArray(item.id, imgUrl, imgAlt);
         return createGridItem(imgUrl, imgAlt, item.id);
       })
 
       masonryLayout();
     })
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
 
 const gridExpandStyle = (data) => {
   if(data.length > 0){
-    masonryGrid.classList.add("grid-expand")
+    masonryGrid.classList.add("grid-expand");
   } else {
     masonryGrid.classList.remove("grid-expand");
     expandBtn.classList.add("d-none");
@@ -122,8 +123,8 @@ nextImg.addEventListener("click", () => {
 window.onload = () => {
   realizacjeData.map(item => {
     addImagesToArray(item.id, item.src, item.alt);
-    masonryGrid.classList.add("grid-expand")
-    return createGridItem(item.src, item.alt, item.id)
+    masonryGrid.classList.add("grid-expand");
+    return createGridItem(item.src, item.alt, item.id);
   })
   masonryLayout();
 }
