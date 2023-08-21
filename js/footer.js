@@ -5,11 +5,11 @@ const socialMediaList = document.getElementById("socialMediaList");
 
 const createSocialMediaLinks = (container, data) => {
   const linkClass = "texts small-texts btn-hover animate__animated socials";
-  const target = "_blank"
+  const target = "_blank";
 
-  data.map(item => {
-    return createListLink(container, item, linkClass, target);
-  })
+  data.forEach(item => {
+    createListLink(container, item, linkClass, target);
+  });
 }
 
 createSocialMediaLinks(socialMediaList, data);

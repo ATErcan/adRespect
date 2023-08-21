@@ -40,4 +40,4 @@ export const data = [
     name: "Kontakt",
     link: "#kontakt",
   },
-]
+];

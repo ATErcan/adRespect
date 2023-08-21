@@ -3,7 +3,7 @@
   color: var(--grey);
   overflow: hidden;
 }
-.section-container {
+.firmie-container {
   max-width: 1320px;
   margin: auto;
 }

@@ -33,6 +33,7 @@ const createGridItem = (src, alt, id) => {
     masonry.layout();
   });
 
+  // Change img presented in modal into clicked img
   image.addEventListener("click", () => {
     modalImg.src = src;
     modalImg.alt = alt;
@@ -57,14 +58,14 @@ const getImages = (page = 1) => {
   try {
     fetch(url).then(res => res.json()).then(data => {
       gridExpandStyle(data);
-      data.map((item) => {
+      data.forEach((item) => {
         const imgUrl = 
           item.urls.regular
           ?? "https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-5529.jpg?w=1380&t=st=1692369396~exp=1692369996~hmac=e07c889690be317cda5c6fafa06e7ef8595a704dc83bd97ed76a407f4ea6c884";
         const imgAlt = item.alt_description ?? "unsplash-image";
         addImagesToArray(item.id, imgUrl, imgAlt);
-        return createGridItem(imgUrl, imgAlt, item.id);
-      })
+        createGridItem(imgUrl, imgAlt, item.id);
+      });
 
       masonryLayout();
     })
@@ -73,6 +74,7 @@ const getImages = (page = 1) => {
   }
 }
 
+// If getImages returns empty then remove the button and gradient
 const gridExpandStyle = (data) => {
   if(data.length > 0){
     masonryGrid.classList.add("grid-expand");
@@ -82,6 +84,7 @@ const gridExpandStyle = (data) => {
   }
 }
 
+// Add all images to images array to display them in modal later on
 const addImagesToArray = (id, url, alt) => {
   const imgObj = {
     id: id,
@@ -111,20 +114,20 @@ prevImg.addEventListener("click", () => {
   ? images.length - 1
   : activeIndex - 1;
   swipeImage(activeIndex);
-})
+});
 
 nextImg.addEventListener("click", () => {
   activeIndex = activeIndex === images.length - 1
   ? 0
   : activeIndex + 1;
   swipeImage(activeIndex);
-})
+});
 
 window.onload = () => {
-  realizacjeData.map(item => {
+  realizacjeData.forEach(item => {
     addImagesToArray(item.id, item.src, item.alt);
     masonryGrid.classList.add("grid-expand");
-    return createGridItem(item.src, item.alt, item.id);
+    createGridItem(item.src, item.alt, item.id);
   })
   masonryLayout();
 }
@@ -132,4 +135,4 @@ window.onload = () => {
 expandBtn.addEventListener("click", (e) => {
   page += 1;
   getImages(page);
-})
+});

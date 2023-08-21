@@ -9,32 +9,6 @@ const navLinkClass = "nav-link";
 const navListClass = "nav-item texts small-texts px-lg-3";
 const navLinkTarget = "_self";
 
-const toggleSearchBar = (searchElement) => {
-  searchElement.classList.add('slide-animation');
-  if(searchElement.classList.contains('search-input-hidden')) {
-    searchElement.classList.replace('search-input-hidden', 'search-input-visible');
-    searchElement.classList.add('px-2')
-  } else {
-    searchElement.classList.remove('px-2')
-    searchElement.classList.replace('search-input-visible', 'search-input-hidden');
-  }
-}
-
-searchIcon.addEventListener('click', () => {
-  const searchInput = document.getElementById('searchInput');
-  if(screenWidth >= 992) {
-    searchIcon.classList.toggle("animate__swing");
-    toggleSearchBar(searchInput)
-  }
-})
-
-window.addEventListener('resize', () => {
-  const newScreenWidth = window.innerWidth;
-  if (newScreenWidth !== screenWidth) {
-    screenWidth = newScreenWidth;
-  }
-});
-
 const createDropdownNavLink = (container, data) => {
   const listElement = document.createElement("li");
   const dropdownLink = document.createElement("a");
@@ -44,9 +18,9 @@ const createDropdownNavLink = (container, data) => {
   listElement.append(...[dropdownLink, dropdownList]);
 
   const dropdownItemClass = "dropdown-item";
-  data.items.map(item => {
-    return createListLink(dropdownList, item, dropdownItemClass);
-  })
+  data.items.forEach(item => {
+    createListLink(dropdownList, item, dropdownItemClass);
+  });
 
   listElement.className = "nav-item dropdown px-lg-3";
   dropdownLink.className = "nav-link dropdown-toggle texts small-texts";
@@ -61,9 +35,35 @@ const createDropdownNavLink = (container, data) => {
   dropdownLink.setAttribute("aria-expanded", "false");
 }
 
-data.map(item => {
-  return item.type === "dropdown"
+data.forEach(item => {
+  item.type === "dropdown"
   ? createDropdownNavLink(navbar, item)
   : createListLink(navbar, item, navLinkClass, navLinkTarget, navListClass)
-})
+});
+
+const toggleSearchBar = (searchElement) => {
+  searchElement.classList.add('slide-animation');
+  if(searchElement.classList.contains('search-input-hidden')) {
+    searchElement.classList.replace('search-input-hidden', 'search-input-visible');
+    searchElement.classList.add('px-2');
+  } else {
+    searchElement.classList.remove('px-2');
+    searchElement.classList.replace('search-input-visible', 'search-input-hidden');
+  }
+}
+
+searchIcon.addEventListener('click', () => {
+  const searchInput = document.getElementById('searchInput');
+  if(screenWidth >= 992) {
+    searchIcon.classList.toggle("animate__swing");
+    toggleSearchBar(searchInput);
+  }
+});
+
+window.addEventListener('resize', () => {
+  const newScreenWidth = window.innerWidth;
+  if (newScreenWidth !== screenWidth) {
+    screenWidth = newScreenWidth;
+  }
+});
 

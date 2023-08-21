@@ -36,13 +36,13 @@ const createCardComponent = ( cardContent ) => {
   vectorIcon.className = "ms-2";
 
   if(cardContent.title === "Wizualizacje"){
-    cardIcon.classList.add("py-2")
+    cardIcon.classList.add("py-2");
   }
 
   cardTitle.textContent = cardContent.title;
   cardText.textContent = cardContent.text;
 }
 
-data.map(cardContent => {
-  return createCardComponent(cardContent);
-})
+data.forEach(cardContent => {
+  createCardComponent(cardContent);
+});

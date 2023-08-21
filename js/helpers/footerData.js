@@ -19,4 +19,4 @@ export const data = [
     name: "LinkedIn",
     link: "https://www.linkedin.com/company/adrespect/",
   },
-]
+];

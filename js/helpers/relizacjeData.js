@@ -44,4 +44,4 @@ export const data = [
     src: "./img/realizations/tree2.jpg",
     alt: "Tree",
   },
-]
+];

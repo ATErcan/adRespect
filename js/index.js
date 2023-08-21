@@ -1,27 +1,8 @@
+import { data } from "./helpers/sliderData.js";
+
 const slider = document.getElementById("slider");
 const prevSlide = document.querySelector(".prev-slide");
 const nextSlide = document.querySelector(".next-slide");
-
-const sliderData = [
-  {
-    id: "slide1",
-    title: "Nowoczesna aranżacja Twojego ogrodu",
-    text: "Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usługz indywidualnym podejściem do każdego projektu.",
-    image: "../img/hero-img.jpeg",
-  },
-  {
-    id: "slide2",
-    title: "Nowoczesna aranżacja Twojego ogrodu",
-    text: "Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usługz indywidualnym podejściem do każdego projektu.",
-    image: "../img/o-firmie.png",
-  },
-  {
-    id: "slide3",
-    title: "Nowoczesna aranżacja Twojego ogrodu",
-    text: "Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usługz indywidualnym podejściem do każdego projektu.",
-    image: "../img/hero-img.jpeg",
-  },
-]
 
 const createSlide = (item) => {
   const slide = document.createElement("div");
@@ -66,9 +47,9 @@ const createSlide = (item) => {
   realisationBtn.appendChild(vectorIcon);
 }
 
-sliderData.map(item => {
-  return createSlide(item);
-})
+data.forEach(item => {
+  createSlide(item);
+});
 
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;

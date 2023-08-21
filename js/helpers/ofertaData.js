@@ -20,4 +20,4 @@ export const data = [
     text: "Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.",
     link: "https://adrespect.pl/realizacje/",
   }
-]
+];
